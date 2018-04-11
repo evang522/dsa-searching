@@ -40,31 +40,31 @@ main {
   box-shadow: 2px 2px black;
 }
 
-.linear-search {
+.DSA-search {
   margin:0 auto;
   width: 95%;
   text-align:center;
 }
 
-.linear-heading {
+.DSA-heading {
   font-size:1.4em;
   font-weight:bold;
   padding-top:1em;
 }
 
-.linear-searchInput {
+.DSA-searchInput {
   height:2em;
   margin-bottom:1em;
   text-align:center;
 }
 
-.linear-input {
+.DSA-input {
   width:80%;
   height:2em;
   padding-left:4px;
 }
 
-.linear-results {
+.DSA-results {
   font-weight:bold;
   padding-top:1px;
   height:7em;

@@ -3,7 +3,7 @@ import './App.css';
 
 class App extends Component {
 
-  linearSort(str,valueToFind) {
+  DSASort(str,valueToFind) {
     valueToFind = Number(valueToFind);
 
     let arr = str.split(' ').filter(member => {
@@ -14,25 +14,25 @@ class App extends Component {
     for (let i=0; i<arr.length; i++ ){
       counter++;
       if (arr[i] === valueToFind) {
-        return this.displayLinearResults({counter, found: true}); 
+        return this.displayDSAResults({counter, found: true}); 
       }
     }
-    return this.displayLinearResults({
+    return this.displayDSAResults({
       counter,
       found:false
     });
   }
 
   handleClick() {
-    if (this.linearInput.value) {
-    this.linearSort(this.linearInput.value, this.linearValueSearchNum.value);
+    if (this.DSAInput.value) {
+    this.DSASort(this.DSAInput.value, this.DSAValueSearchNum.value);
     }
   }
     
     
     
-  displayLinearResults(obj) {
-    let elm = document.querySelector('.linear-results');
+  displayDSAResults(obj) {
+    let elm = document.querySelector('.DSA-results');
     elm.innerHTML = `
       <p>Iterations: ${obj.counter}</p>
       <p>Number was Found: ${obj.found}</p>
@@ -50,15 +50,15 @@ class App extends Component {
         <main>
           <h1 className='main-title'>DSA Searching Algorithms</h1>
           <section className='main-content'>
-            <section className='linear-search'>
-              <p className='linear-heading'>Linear Search</p>
-              <p className='linear-description'>
+            <section className='DSA-search'>
+              <p className='DSA-heading'>DSA Search</p>
+              <p className='DSA-description'>
                 Provide a set of numbers separated by spaces. The output will be the amount of iterations that were required to find the number, as well as whether or not the number was found. 
                 </p>
-              <input ref={input => this.linearValueSearchNum = input} className='linear-searchInput' placeholder='Number to Search for...'/>
-              <input ref={input => this.linearInput = input} className='linear-input'/>
-              <button onClick={() => this.handleClick()}className='linear-button'>Submit</button>
-              <div className='linear-results'>
+              <input ref={input => this.DSAValueSearchNum = input} className='DSA-searchInput' placeholder='Number to Search for...'/>
+              <input ref={input => this.DSAInput = input} className='DSA-input'/>
+              <button onClick={() => this.handleClick()}className='DSA-button'>Submit</button>
+              <div className='DSA-results'>
                 <p>Results:</p>
               </div>
             </section>
